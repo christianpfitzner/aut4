@@ -1,0 +1,3 @@
+/home/chris/workspace/git/01_bildverarbeitung/10_corners/build/CMakeFiles/rebuild_cache.dir
+/home/chris/workspace/git/01_bildverarbeitung/10_corners/build/CMakeFiles/edit_cache.dir
+/home/chris/workspace/git/01_bildverarbeitung/10_corners/build/CMakeFiles/harris_corner.dir

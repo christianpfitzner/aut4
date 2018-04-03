@@ -1,0 +1,3 @@
+/home/chris/workspace/git/01_bildverarbeitung/08_edge/build/CMakeFiles/edit_cache.dir
+/home/chris/workspace/git/01_bildverarbeitung/08_edge/build/CMakeFiles/rebuild_cache.dir
+/home/chris/workspace/git/01_bildverarbeitung/08_edge/build/CMakeFiles/edge.dir
