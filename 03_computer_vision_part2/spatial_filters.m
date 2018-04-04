@@ -15,7 +15,7 @@ close all;
 
 % show input image
 figure(1); 
-[img, map] = imread ("resources/lenna_sw.png");     % load image
+[img, map] = imread ("../resources/lenna_sw.png");     % load image
 imshow(img);                                        % show image
 
 
@@ -75,11 +75,13 @@ G5 = 1/256 * [1  4  6  4  1;
 S = [0 -1 0; 
      -1 5 -1; 
      0 -1 0];      
+output = conv2(S, img);     
+    
     
 E1 = [1 0 -1; 
       0 0  0; 
       1 0  1]; 
-      
+%output = conv2(E1, img);       
       
 E2 = [-1 -1 -1; 
       -1  8 -1; 
@@ -91,10 +93,10 @@ E2 = [-1 -1 -1;
  
 % sobel operator
 Sx = [1 0 -1; 
-       2 0 -2; 
-       1 0 -1]; 
+      2 0 -2; 
+      1 0 -1]; 
 Sy = Sx'; 
-
+%output = conv2(Sx, img); 
 
 
   
@@ -105,7 +107,7 @@ blurred  = (blurred(2:end-1, 2:end-1));
 blurred2 = conv2(G5, blurred); 
 blurred2 = (blurred2(2:end-3, 2:end-3)); 
 
-output = img - blurred2; 
+%output = img - blurred2; 
 
 size(blurred)
 size(img)
