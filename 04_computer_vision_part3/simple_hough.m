@@ -29,6 +29,8 @@ p_size = 100;
 m = 3; 
 t = 1; 
 noise_scale = 20;
+
+
 % create line with random noise
 for i=1:p_size 
   if(i < 50)
@@ -40,28 +42,21 @@ for i=1:p_size
   end;
 end;
 
-figure(2); 
-plot(p(1,:), p(2,:), 'xr');
+%figure(2); 
+%plot(p(1,:), p(2,:), 'xr');
 
 % apply hough transform 
-
 for i=1:p_size
   for a=1:length(alpha)
     d(a, i) = p(1,i) * cos(alpha(a)) + p(2,i) * sin(alpha(a));
-    %i
-    %p(1,i)
-    %p(2,i)
-    %p(:,i)
-    
-    %disp ("press return to continue") 
-    %pause ()
+
   end; 
 end; 
 
 
-figure(3);
-for i=1:length(p)
-  plot(alpha, d(:,i));
-  hold on; 
-end; 
+%figure(3);
+%for i=1:length(p)
+%  plot(alpha, d(:,i));
+%  hold on; 
+%end; 
  
