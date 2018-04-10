@@ -57,6 +57,8 @@ end;
 %figure(3);
 %for i=1:length(p)
 %  plot(alpha, d(:,i));
+%disp ("press return to continue") 
+%pause ()
 %  hold on; 
 %end; 
  
