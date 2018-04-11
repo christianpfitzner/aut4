@@ -44,6 +44,8 @@ I2 = [10, 10, 10, 10, 10;
 K0 = [0 0 0
       0 1 0
       0 0 0];  
+
+ identity = conv2(K0 , I1); 
       
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Smoothing Kernel
@@ -53,6 +55,10 @@ K0 = [0 0 0
 K1 = [1/9, 1/9, 1/9 ; 
      1/9, 1/9, 1/9 ; 
      1/9, 1/9, 1/9 ]; 
+K25 = 1/25 .*ones(5,5); 
+output = conv2(K25, img); 
+
+
 
 % Gaussian Blurring (Size 3)
 G3 = 1/16 * [1  2  1; 
@@ -75,7 +81,7 @@ G5 = 1/256 * [1  4  6  4  1;
 S = [0 -1 0; 
      -1 5 -1; 
      0 -1 0];      
-output = conv2(S, img);     
+%output = conv2(S, img);     
     
     
 E1 = [1 0 -1; 
@@ -96,9 +102,11 @@ Sx = [1 0 -1;
       2 0 -2; 
       1 0 -1]; 
 Sy = Sx'; 
-%output = conv2(Sx, img); 
+output = conv2(Sy, img); 
 
-
+     
+figure(2);      
+imshow(uint8(output)); 
   
   
 % Difference of Gaussian (DOG)
@@ -109,16 +117,14 @@ blurred2 = (blurred2(2:end-3, 2:end-3));
 
 %output = img - blurred2; 
 
-size(blurred)
-size(img)
   
+
 
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % output
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-figure(2);      
-imshow(uint8(output)); 
+
 
 
 
