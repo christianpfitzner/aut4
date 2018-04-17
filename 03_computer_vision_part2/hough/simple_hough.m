@@ -42,8 +42,8 @@ for i=1:p_size
   end;
 end;
 
-%figure(2); 
-%plot(p(1,:), p(2,:), 'xr');
+figure(2); 
+plot(p(1,:), p(2,:), 'xr');
 
 % apply hough transform 
 for i=1:p_size
@@ -54,11 +54,11 @@ for i=1:p_size
 end; 
 
 
-%figure(3);
-%for i=1:length(p)
-%  plot(alpha, d(:,i));
+figure(3);
+for i=1:length(p)
+  plot(alpha, d(:,i));
 %disp ("press return to continue") 
 %pause ()
-%  hold on; 
-%end; 
+  hold on; 
+end; 
  
